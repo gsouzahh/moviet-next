@@ -1,10 +1,13 @@
-import { ExperienceBar } from "../public/components/ExperienceBar";
+import Head from 'next/head';
+
 import { CompletedChallanger } from "../src/components/CompletedChallanger";
+import { ExperienceBar } from "../public/components/ExperienceBar";
+import { ChallangerBox } from "../src/components/ChallangerBox";
 import { Countdown } from "../src/components/Countdown";
 import { Profile } from "../src/components/Profile";
+
 import styles from '../src/styles/pages/Home.module.css';
 
-import Head from 'next/head';
 
 export default function Home() {
   return (
@@ -19,7 +22,9 @@ export default function Home() {
           <CompletedChallanger />
           <Countdown />
         </div>
-        <div></div>
+        <div>
+          <ChallangerBox />
+        </div>
       </section>
     </div>
   );
