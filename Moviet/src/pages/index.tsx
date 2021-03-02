@@ -1,9 +1,12 @@
 import Head from "next/head";
-import { ExperienceBar } from "../components/ExperienceBar";
+
 import { CompletedChallanger } from "../components/CompletedChallanger";
-import { Profile } from "../components/Profile";
-import styles from "../styles/pages/Home.module.css";
+import { ExperienceBar } from "../components/ExperienceBar";
+import { ChallangerBox } from "../components/ChallangerBox";
 import { Countdown } from "../components/Countdown";
+import { Profile } from "../components/Profile";
+
+import styles from "../styles/pages/Home.module.css";
 
 export default function Home() {
   return (
@@ -19,7 +22,9 @@ export default function Home() {
           <CompletedChallanger />
           <Countdown />
         </div>
-        <div className={styles.rightContainer}></div>
+        <div className={styles.rightContainer}>
+          <ChallangerBox />
+        </div>
       </section>
     </div>
   );

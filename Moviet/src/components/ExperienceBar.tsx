@@ -1,13 +1,17 @@
+import { useContext } from "react";
+import { ChallangerContext } from "../contexts/ChallangerContext";
 import styles from "../styles/components/ExperienceBar.module.css";
 
 export function ExperienceBar() {
+  const { currentXp } = useContext(ChallangerContext);
+
   return (
     <header className={styles.experienceBar}>
       <span>0 xp</span>
       <div>
         <div style={{ width: "50%" }}></div>
         <span className={styles.currentExperience} style={{ left: "50%" }}>
-          300 xp
+          {currentXp} xp
         </span>
       </div>
       <span>600 xp</span>
